@@ -202,7 +202,7 @@ function servico_home_post_type() {
 function my_login_logo() { ?>
 	<style>
 	   body.login div#login h1 a {
-	        background: url('wp-content/themes/cgf/img/logo_login.png')no-repeat;
+	        background: url('wp-content/themes/d3imob/img/logo_login.png')no-repeat;
 	        height: 70px;
 	        width: 323px;
 	        
