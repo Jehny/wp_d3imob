@@ -3,7 +3,7 @@
 	
 	include "slider.php";
 
-	// include "sobre_cgf.php";
+	include "sobre_dimob.php";
 
 	// include "expertises.php";
 

@@ -51,7 +51,7 @@ $(document).ready(function(){
 
         $('.nav_cel_header').css({marginTop: '10px'});
         $('#navbar-collapse').addClass('bg_menu');
-        $(".bg_menu").css({"background": "#C12232"});
+        $(".bg_menu").css({"background": "#ED6E23"});
         $('.logo_h_fixed').addClass('branca');
     }
 

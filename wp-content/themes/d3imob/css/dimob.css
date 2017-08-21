@@ -36,7 +36,6 @@ body {
 }
 
 .div_redes { 
-	background: #333333;
 	color: #FFFFFF;
 }
 
@@ -65,7 +64,15 @@ body {
 	text-align: center;
 	padding-right: 0px; 
 	padding-left: 0px; 
-	margin-top: 5px;
+	margin-top: 1%;
+}
+
+.cabecalho .redes_sociais li i {
+	font-size: 1.5em;
+}
+
+.cabecalho .logo h1 {
+	margin-top: 0px;
 }
 
 .cabecalho .logo_img {
@@ -94,7 +101,7 @@ body {
 }
 
 .cabecalho .nav > li {
-	margin-top: 4%;
+	margin-top: 0%;
 	font-size: 16px;
 }
 
@@ -141,13 +148,13 @@ body {
 }
 
 #menu nav ul {
-  float: right;
-  height: 36px;
+  	height: 36px;
+ 	padding-top: 3%;
 }
 #menu nav li {
   padding: 0.5% 3%;
   text-align: center;
-  text-transform: none;
+  text-transform: uppercase;
 }
 #menu nav li a {
   padding: 4px;
@@ -155,13 +162,13 @@ body {
 }
 #menu nav li a:hover {
   color: white;
-  border-bottom: 2px solid #cc0c1f;
+  border-bottom: 2px solid #FBAD18;
   text-decoration: none;
 }
 
 
 #slider {
-	border-bottom: 7px solid #F82F3F;
+	border-bottom: 4px solid #FBAD18;
 }
 
 
@@ -170,16 +177,17 @@ body {
 }
 
 #slider .carousel-control {
-	top: 45%;
-	width: 7%;
+	top: 40%;
+	width: 5%;
 }
 
 #slider .carousel-control.left {
-    height: 45px;
+    height: 80px;
+    background-image: none;
 }
 
 #slider .carousel-control.left span i {
-	font-size: 3em;
+	font-size: 6em;
 }
 
 #slider .carousel-control.left span i:hover {
@@ -187,11 +195,12 @@ body {
 }
 
 #slider .carousel-control.right {
-    height: 45px;
+    height: 80px;
+    background-image: none;
 }
 
 #slider .carousel-control.right span i {
-	font-size: 3em;
+	font-size: 6em;
 }
 
 #slider .carousel-control.right span i:hover{
@@ -261,59 +270,61 @@ body {
 
 .sobre_empresa h1 {
 	font-size: 24px;
-	color: #2A2520;
+	color: #545454;
 	padding-left: 2%;
-	padding-bottom: 1%;
+	text-align: center;
 }
 
 .sobre_empresa .traco {
-	position: relative;
-	overflow: auto;
+/* 	position: relative;
+	overflow: auto; */
+	margin-top: -11px;
+    margin-bottom: 2%;
 }
 
 .sobre_empresa .traco hr {
-	color: #F82F3F;
-    border-color: #F82F3F;
+	color: #FBAD18;
+    border-color: #FBAD18;
     width: 7%;
-    float: left;
-    margin-left: 2%;
     border: 1px solid;
     margin-bottom: 0;
 }
 
 .sobre_empresa .empresa {
-	color: #555555;
+	color: #545454;
 }
 
 .sobre_empresa .sobre {
-	color: #555555;
-	font-size: 16px;
+	color: #545454;
+	font-size: 19px;
+	text-align: center;
+	padding: 2% 4%;
 }
 
 .sobre_empresa .valores {
-	color: #555555;
-	font-size: 16px;
+	color: #545454;
+	font-size: 19px;
 	text-align: center;
-	margin-top: 4%;
+    padding: 2% 5%;
 }
 
 .sobre_empresa .valores i {
-	color: #A5010E;
+	color: #FBAD18;
 	font-size: 2em;	
 }
 
 .sobre_empresa .valores .texto {
-	padding: 0% 15% 0% 15%
+	padding: 0% 15% 0% 15%;
+	font-size: 16px;
 }
 
 .sobre_empresa .valores .divisao {
-	border-right: 1px solid #DDDDDD;
 	min-height: 206px;
 }
 
 .sobre_empresa .titulo_empresa {
 	font-size: 24px;
-	color: #2A2520;
+	color: #FBAD18;
 }
 
 .expertises_bg {

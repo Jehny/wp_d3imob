@@ -22,32 +22,7 @@
 
 	<body>
 	<div class="cabecalho">
-      	<div class="row-fluid div_redes" id="redes">
-			<div class="container-fluid">
-				<ul class="list-inline redes_sociais">
-					<?php
-						$redes = get_posts('post_type=redes_sociais');
-						$facebook = "";
-						$youtube = "";
-						$in = "";
-						$twitter = "";
-						$instagram = "";
-						foreach ($redes as $rede) {
-							$facebook = get_field('facebook', $rede->ID);
-							$youtube = get_field('youtube', $rede->ID);
-							$in = get_field('linkedin', $rede->ID);
-							$instagram = get_field('instagram', $rede->ID);
-						 } 
-					?>
-					<li><a href="<?php echo $facebook; ?>" target="blank"><i class="icon-facebook"></i></a></li>
-					<li><a href="<?php echo $instagram; ?>" target="blank"><i class="icon-instagram"></i></a></li>
-					<li><a href="<?php echo $in; ?>" target="blank"><i class="icon-linkedin2"></i></a></li>
-					<li><a href="<?php echo $youtube; ?>" target="blank"><i class="icon-youtube"></i></a></li>
-					
-
-				</ul>
-			</div>
-		</div>
+      	
 		<div class="menu_home">
 			<div id="menu" class="navbar navbar-default navbar-header row-fluid">
 				<div class="logo col-xs-4 col-sm-3 col-md-4">
@@ -65,18 +40,46 @@
 			        </button>
 			    </div>
 				<nav id="navbar-collapse" class="collapse navbar-collapse nav_cel">
-					<ul class="text-uppercase nav navbar-nav col-xs-12 col-sm-9 col-md-7 col-md-offset-1">
+					<ul class="text-uppercase nav navbar-nav col-xs-8 col-sm-6 col-md-6">
 						<li><a href="#redes" class="scroll" data-offset="85" id="home_link">Home</a></li>
 						<li><a href="#sobre_empresa" id="empresa_link" class="scroll" data-offset="60">D3imob</a></li>
 						<li><a href="#expertises" id="expertises_link" class="scroll" data-offset="60">Imóveis</a></li>
 						<li><a href="#noticias_notas" id="noticias_link" class="scroll" data-offset="60">Blog</a></li>
 						<li><a href="#time" id="time_link" class="scroll" data-offset="60">Consultores</a></li>
 						<li><a href="#contato" id="contato_link" class="scroll" data-offset="60">Contato</a></li>
+
 					</ul>
+					<ul class="list-inline redes_sociais col-md-2">
+						<?php
+							$redes = get_posts('post_type=redes_sociais');
+							$facebook = "";
+							$youtube = "";
+							$in = "";
+							$twitter = "";
+							$instagram = "";
+							foreach ($redes as $rede) {
+								$facebook = get_field('facebook', $rede->ID);
+								$youtube = get_field('youtube', $rede->ID);
+								$in = get_field('linkedin', $rede->ID);
+								$instagram = get_field('instagram', $rede->ID);
+							 } 
+						?>
+						<li><a href="<?php echo $facebook; ?>" target="blank"><i class="icon-facebook"></i></a></li>
+						<li><a href="<?php echo $instagram; ?>" target="blank"><i class="icon-instagram"></i></a></li>
+						<li><a href="<?php echo $in; ?>" target="blank"><i class="icon-linkedin2"></i></a></li>
+						<li><a href="<?php echo $youtube; ?>" target="blank"><i class="icon-youtube"></i></a></li>
+
+					</ul>
+					<!-- <div class="row-fluid div_redes" id="redes">
+						<div class="container-fluid">
+						
+					</div>
+					</div> -->
 				</nav>
+				
 			</div>
-		 	
-		 </div>				
+			
+		</div>				
 	</div>
 
 			
