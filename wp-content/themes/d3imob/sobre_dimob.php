@@ -8,6 +8,10 @@
 	$visao = get_field('visao', $q->ID);
 	$titulo_valores = get_field('titulo_valores', $q->ID);
 	$valores = get_field('valores', $q->ID);
+	$banner_sobre = get_field('banner_sobre', $q->ID);
+	$banner_texto_titulo = get_field('texto_titulo_banner', $q->ID);
+	$banner_texto_descricao = get_field('texto_descricao_banner', $q->ID);
+	
 
 ?>
 
@@ -35,7 +39,7 @@
 				<p class="titulo_empresa"><?php echo $titulo_visao; ?></p>
 				<p class="texto"><?php echo $visao; ?></p>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4">
+			<div class="col-xs-12 col-sm-12 col-md-4 bg_valor">
 				<p><i class="icon-user5"></i></p>
 				<p class="titulo_empresa"><?php echo $titulo_valores; ?></p>
 				<p class="texto"><?php echo $valores; ?></p>
@@ -43,3 +47,13 @@
 		</div>
 	</div>
 </section>
+
+<div class="sobre_banner_contato">
+	<img src="<?php echo $banner_sobre['url']; ?>" alt="<?php echo $banner_sobre['alt']; ?>" />
+	<div class="textos">
+		<p class="titulo"><?php echo $banner_texto_titulo; ?></p>
+		<p class="descricao"><?php echo $banner_texto_descricao; ?></p>
+		<p class="botao"><a href="">Entre em contato!</a></p>
+		
+	</div>
+</div>

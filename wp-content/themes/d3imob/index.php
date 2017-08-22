@@ -5,7 +5,7 @@
 
 	include "sobre_dimob.php";
 
-	// include "expertises.php";
+	include "imovel_destaque.php";
 
 	// include "noticias.php";
 
