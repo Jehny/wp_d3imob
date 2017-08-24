@@ -7,11 +7,11 @@
 
 	include "imovel_destaque.php";
 
-	// include "noticias.php";
+	include "newsletter.php";
 
-	// include "time.php";
+	include "time.php";
 
 	// include "fale_conosco.php";
 
-	// include "layout/footer.php";
+	include "layout/footer.php";
 ?>

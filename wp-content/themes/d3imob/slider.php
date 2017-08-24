@@ -85,6 +85,7 @@
 		</a>
 	</div>
 </div>
+<div class="boder_gradiente"></div>
 
 <!-- <div class="container-fluid solicite_consulta hidden-sm hidden-xs">
 	<form action="" method="post" class="row-fluid"> 

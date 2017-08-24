@@ -1,162 +1,54 @@
 <?php
-	$q = get_page_by_title( 'Quem Somos' );
+	$q = get_page_by_title( 'Time' );
+	
 	$rita = get_field("nome_rita", $q->ID);
-	$foto_rita = get_field('rita', $q->ID);		
-	$desc_rita = get_field('descricao_rita', $q->ID);
-	$atuacao_rita = get_field('areas_de_atuacao_rita', $q->ID);
-	$atividade_rita = get_field('atividades_profissionais_rita', $q->ID);
-	$complemento_rita = get_field('complemento_rita', $q->ID);
-	$email_rita = get_field('email_rita', $q->ID);
+	$foto_rita = get_field('foto_rita', $q->ID);		
+	$creci_rita = get_field('creci_rita', $q->ID);
+	$telefone_rita = get_field('tel_rita', $q->ID);
 
-	$karla = get_field("nome_karla", $q->ID);
-	$foto_karla = get_field('karla', $q->ID);
-	$desc_karla = get_field('descricao_karla', $q->ID);
-	$atuacao_karla = get_field('areas_de_atuacao_karla', $q->ID);
-	$atividade_karla = get_field('atividades_profissionais_karla', $q->ID);
-	$complemento_karla = get_field('complemento_karla', $q->ID);
-	$email_karla = get_field('email_karla', $q->ID);
+	$cris = get_field("nome_cris", $q->ID);
+	$foto_cris = get_field('foto_cris', $q->ID);		
+	$creci_cris = get_field('creci_cris', $q->ID);
+	$telefone_cris = get_field('tel_cris', $q->ID);
+
+	$rogaciano = get_field("nome_rogaciano", $q->ID);
+	$foto_rogaciano = get_field('foto_rogaciano', $q->ID);
+	$creci_rogaciano = get_field('creci_rogaciano', $q->ID);
+	$telefone_rogaciano = get_field('tel_rogaciano', $q->ID);
 
 ?>
 
 <div id="time" class="row-fluid time">
 	<div class="container-fluid">
-		<div class="traco_centro"><hr></div>
-		<h1>Conheça nossa Equipe</h1>
-			<i class="icon-users2"></i>
+		<h1>Não encontra o que você precisa?</h1>
+		<div class="traco"><hr></div>
+		<div class="subtitulo">
+			Entre em contato através do número 85 99749.1539 e fale com um de nossos consultores. Teremos o maior prazer em ajudar na solução do seu problema!
+		</div>
 	</div>
 
 	<div id="equipe">
-		<ul class="hidden-sm hidden-xs">
-			<li class="frame-1">
-				<div class="frame-content">
-					<div class="conteudo_equipe">
-						<div class="traco_left"><hr></div>
-						<h3><?php echo $rita; ?></h3>
-						<div class="descricao_profissional">
-							<?php echo $desc_rita; ?>
-						</div>
-						<?php if($atuacao_rita){ ?>
-							<div class="area">
-								<?php echo $atuacao_rita; ?>
-							</div>
-						<?php } ?>
-						<?php if($atividade_rita){ ?>
-							<div class="atividade">
-								<?php echo $atividade_rita; ?>
-							</div>
-						<?php } ?>
-						<?php if($complemento_rita){ ?>
-							<div class="complemento">
-								<?php echo $complemento_rita; ?>
-							</div>
-						<?php } ?>
-						<?php if($email_rita){ ?>
-							<div class="email">
-								<a href="mailto:<?php $email_rita; ?>"><?php echo $email_rita; ?></a>
-							</div>
-						<?php } ?>
-					</div>
+		<div class="container-fluid">
+			<h3>Entre em contato com nossos consultores!</h3>
+			<div class="traco"><hr></div>
+			<div class="col-xs-12 col-sm-12 col-md-12 item">
+				<div class="col-md-4">
+					<p class="foto"><?php echo $foto_rita; ?></p>
+					<p class="nome"><?php echo $rita; ?></p>
+					<p class="creci"><?php echo $creci_rita; ?></p>
+					<p class="tel"><?php echo $telefone_rita; ?></p>
 				</div>
-			</li>
-			<li class="frame-2">
-				<div class="frame-content">
-					<div class="conteudo_equipe">
-						<div class="traco_left"><hr></div>
-						<h3><?php echo $karla ?></h3>
-						<div class="descricao_profissional">
-							<?php echo $desc_karla; ?>
-						</div>
-						<?php if($atuacao_karla){ ?>
-							<div class="area">
-								<?php echo $atuacao_karla; ?>
-							</div>
-						<?php } ?>
-						<?php if($atividade_karla){ ?>
-							<div class="atividade">
-								<?php echo $atividade_karla; ?>
-							</div>
-						<?php } ?>
-						<?php if($complemento_karla){ ?>
-							<div class="complemento">
-								<?php echo $complemento_karla; ?>
-							</div>
-						<?php } ?>
-						<?php if($email_karla){ ?>
-							<div class="email">
-								<a href="mailto:<?php $email_karla; ?>"><?php echo $email_karla; ?></a>
-							</div>
-						<?php } ?>
-					</div>
+				<div class="col-md-4">
+					<p class="foto"><?php echo $foto_cris; ?></p>
+					<p class="nome"><?php echo $cris; ?></p>
+					<p class="creci"><?php echo $creci_cris; ?></p>
+					<p class="tel"><?php echo $telefone_cris; ?></p>
 				</div>
-			</li>
-		</ul>
-
-		<div class="hidden-md hidden-lg row-fluid perfil">
-			<div class="foto_time col-sm-5">
-				<img src="<?php bloginfo('template_url'); ?>/img/rita.jpg" class="img-responsive">
-			</div>
-			<div class="texto col-sm-7">
-				<div class="conteudo_equipe">
-					<div class="traco_left"><hr></div>
-					<h3><?php echo $rita; ?></h3>
-					<div class="descricao_profissional">
-						<?php echo $desc_rita; ?>
-					</div>
-					<?php if($atuacao_rita){ ?>
-						<div class="area">
-							<?php echo $atuacao_rita; ?>
-						</div>
-					<?php } ?>
-					<?php if($atividade_rita){ ?>
-						<div class="atividade">
-							<?php echo $atividade_rita; ?>
-						</div>
-					<?php } ?>
-					<?php if($complemento_rita){ ?>
-						<div class="complemento">
-							<?php echo $complemento_rita; ?>
-						</div>
-					<?php } ?>
-					<?php if($email_rita){ ?>
-						<div class="email">
-							<a href="mailto:<?php $email_rita; ?>"><?php echo $email_rita; ?></a>
-						</div>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-
-		<div class="hidden-md hidden-lg row-fluid perfil">
-			<div class="foto_time col-sm-5">
-				<img src="<?php bloginfo('template_url'); ?>/img/karla.jpg" class="img-responsive">
-			</div>
-			<div class="texto col-sm-7">
-				<div class="conteudo_equipe">
-					<div class="traco_left"><hr></div>
-					<h3><?php echo $karla ?></h3>
-					<div class="descricao_profissional">
-						<?php echo $desc_karla; ?>
-					</div>
-					<?php if($atuacao_karla){ ?>
-						<div class="area">
-							<?php echo $atuacao_karla; ?>
-						</div>
-					<?php } ?>
-					<?php if($atividade_karla){ ?>
-						<div class="atividade">
-							<?php echo $atividade_karla; ?>
-						</div>
-					<?php } ?>
-					<?php if($complemento_karla){ ?>
-						<div class="complemento">
-							<?php echo $complemento_karla; ?>
-						</div>
-					<?php } ?>
-					<?php if($email_karla){ ?>
-						<div class="email">
-							<a href="mailto:<?php $email_karla; ?>"><?php echo $email_karla; ?></a>
-						</div>
-					<?php } ?>
+				<div class="col-md-4">
+					<p class="foto"><?php echo $foto_rogaciano; ?></p>
+					<p class="nome"><?php echo $rogaciano; ?></p>
+					<p class="creci"><?php echo $creci_rogaciano; ?></p>
+					<p class="tel"><?php echo $telefone_rogaciano; ?></p>
 				</div>
 			</div>
 		</div>

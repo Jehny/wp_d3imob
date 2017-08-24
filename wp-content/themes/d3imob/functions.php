@@ -1,9 +1,9 @@
 <?php
 register_nav_menu( 'main-menu', __( 'Main Menu' ) );
 add_action( 'widgets_init', 'widgets_novos_widgets_init' );
-add_action( 'widgets_init', 'twitter_widgets_init' );
+add_action( 'widgets_init', 'youtube_widgets_init' );
 add_action( 'widgets_init', 'face_widgets_init' );
-add_action( 'widgets_init', 'plus_widgets_init' );
+add_action( 'widgets_init', 'instagran_widgets_init' );
 add_action( 'widgets_init', 'in_widgets_init' );
 add_action( 'widgets_init', 'feed_facebook_widgets_init' );
 add_action( 'widgets_init', 'mapa_widgets_init' );
@@ -20,10 +20,11 @@ $supports = array('title', 'editor','thumbnail', 'excerpt', 'custom-fields', 'co
 
 add_post_type_support('blog', $supports);
 
-add_action( 'init', 'servico_home_post_type' );
+// add_action( 'init', 'servico_home_post_type' );
 add_action( 'init', 'redes_sociais' );
+add_action( 'init', 'imovel' );
 
-add_post_type_support('servico_home', $supports);
+// add_post_type_support('servico_home', $supports);
 
 function add_blog_automatically($post_ID) {
 	global $wpdb;
@@ -54,11 +55,11 @@ function widgets_novos_widgets_init() {
  * Widget redes sociais
  *
  */
-function twitter_widgets_init() {
+function youtube_widgets_init() {
 
 	register_sidebar( array(
-		'name' => 'Twitter',
-		'id' => 'twitter',
+		'name' => 'YouTube',
+		'id' => 'youtube',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',
@@ -78,11 +79,11 @@ function face_widgets_init() {
 	) );
 }
 
-function plus_widgets_init() {
+function instagran_widgets_init() {
 
 	register_sidebar( array(
-		'name' => 'Google+',
-		'id' => 'plus',
+		'name' => 'Instagran',
+		'id' => 'instagran',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',
@@ -185,18 +186,31 @@ function redes_sociais() {
 	);
 }
 
-function servico_home_post_type() {
-	register_post_type( 'servico_home',
+function imovel() {
+	register_post_type( 'imovel',
 			array(
 					'labels' => array(
-							'name' => __( 'Servico Home' ),
-							'singular_name' => __( 'Servico Home' )
+							'name' => __( 'Imóveis' ),
+							'singular_name' => __( 'Imóveis' )
 					),
 					'public' => true,
 					'has_archive' => true,
 			)
 	);
 }
+
+// function servico_home_post_type() {
+// 	register_post_type( 'servico_home',
+// 			array(
+// 					'labels' => array(
+// 							'name' => __( 'Servico Home' ),
+// 							'singular_name' => __( 'Servico Home' )
+// 					),
+// 					'public' => true,
+// 					'has_archive' => true,
+// 			)
+// 	);
+// }
 
 // Custom WordPress Login Logo
 function my_login_logo() { ?>
