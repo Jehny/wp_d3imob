@@ -23,11 +23,6 @@
 			if($email != "" && $message != "" && $nome != ""){
 				
 				if(wp_mail( $to, $subject,  $message, $headers)){
-					// $sucesso = "<div class='sucesso alert-info'>
-					// 	<button type='button' class='close' data-dismiss='alert'>×</button>
-					// 	<h4>Sucesso!</h4>
-					// 	<p>Seu e-mail foi enviado com sucesso. </p>
-					// 	</div>";
 					$teste = "<input type='hidden' id='enviado' />";
 					$message = "Seu e-mail foi enviado com sucesso!";
 				}
@@ -47,13 +42,16 @@
 
 <div class="bg_body">
 	<section class="container-fluid" id="contato">
-		<div class="traco_centro"><hr></div>
-		<h1>Fale com o CGF Jurídico</h1>
-			<i class="icon-bubbles"></i>
+		<div class="breadcrumb">
+			<ul>
+				<li>Home</li>
+				<li>Contato</li>
+			</ul>
+		</div>
 		<h2>Nesta página você poderá solicitar informações, sugerir e opinar sobre o nosso site.  Estamos aqui para ajudar.</h2>
 		<div class="row-fluid" id="form_contato">
 			<form action="" method="POST">
-				<div class="col-md-4 col-md-offset-1">
+				<div class="col-md-12">
 					<div class="linh_form">
 						<label>Nome*</label>
 						<input type="text" name="nome" required>
@@ -67,18 +65,18 @@
 						<input type="tel" name="telefone" id="telefone" class="phone" maxlength="15">
 					</div>
 				</div>
-				<div class="col-md-5 col-md-offset-1">
+				<div class="col-md-12">
 					<div class="linh_form_m">
 						<label>Qual o motivo do seu contato?*</label>
 						<input type="text" name="assunto" required>
 					</div>
 					<div class="linh_form">
 						<label>Mensagem*</label>
-						<textarea name="mensagem" cols="30" rows="7" required></textarea> 
+						<textarea name="mensagem" cols="30" rows="8" required></textarea> 
 					</div>
 				</div>
 				<div class="div_btn row-fluid">
-					<button class="btn btn-vermelho" type="submit" name="submit">Enviar mensagem</button>
+					<button class="btn btn-vermelho" type="submit" name="submit">Enviar</button>
 				</div>
 			</form>
 			<?php if(isset($teste)){

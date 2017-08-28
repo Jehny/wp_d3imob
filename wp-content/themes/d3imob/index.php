@@ -8,7 +8,7 @@
 	include "imovel_destaque.php";
 
 	include "newsletter.php";
-
+	include "sub_time.php";
 	include "time.php";
 
 	// include "fale_conosco.php";

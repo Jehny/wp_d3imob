@@ -71,6 +71,43 @@ body {
 	font-size: 1.5em;
 }
 
+
+.div_redes_2 { 
+	background: #FBAD18;
+	color: #FFFFFF;
+}
+
+.div_redes_2 a, .div_redes_2 a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.div_redes_2 a i {
+	font-size: 2em;
+	padding: 5%;
+}
+
+.cabecalho .redes_sociais_2 {
+	text-align: right;
+	margin-bottom: 0;
+	float: right;
+	margin-right: 3%;
+}
+
+.cabecalho .redes_sociais_2 li img {
+	width: 70%;
+	margin: 0;
+	display: inherit;
+}
+
+.cabecalho .redes_sociais_2 li {
+	text-align: center;
+	padding-right: 24px; 
+	padding-left: 0px; 
+	margin-top: 5px;
+}
+
+
 .cabecalho .logo h1 {
 	margin-top: 0px;
 }
@@ -121,11 +158,40 @@ body {
 	margin-top: 1%;
 }
 
+.contato_header {
+	float: right;
+	color: white;
+	font-family: helvetica;
+	padding-top: 4%;
+}
+
+.contato_header .texto {
+	font-size: 16px;
+	padding-left: 8%;
+	margin-bottom: 0;
+}
+
+.contato_header .tel { color: #FAAA19; display: inline; font-size: 16px;}
+.contato_header  i {color: #FAAA19; display: inline; font-size: 20px; padding-right: 3%;}
+
 .menu_home {
 	position: absolute;
 	z-index: 1040;
 	width: 100%;
 }
+
+.menu_home_2 {
+	position: relative;
+	z-index: 1040;
+	width: 100%;
+	overflow: hidden;
+}
+
+.menu_2 .bg_menu {
+	background: #535353 !important;
+}
+
+.menu_2 {background-color: #535353 !important;}
 #menu {
   padding-bottom: 1%;
   margin: 0;
@@ -161,6 +227,42 @@ body {
   color: white;
 }
 #menu nav li a:hover {
+  color: white;
+  border-bottom: 2px solid #FBAD18;
+  text-decoration: none;
+}
+
+#menu_2 {
+  padding-bottom: 0%;
+  margin: 0;
+  width: 100%;
+  border-radius: 0;
+  border-color: transparent;
+  position: relative;
+  background-color:transparent; 
+  /* top: 37px; */
+}
+#menu_2 .logo_2 {
+ /* float: left;
+  padding-right: 1%;
+  padding-left: 7%;*/
+  padding-left: 5%;
+}
+
+#menu_2 nav ul {
+  	height: 36px;
+ 	padding-top: 5%;
+}
+#menu_2 nav li {
+  padding: 0.5% 3%;
+  text-align: center;
+  text-transform: uppercase;
+}
+#menu_2 nav li a {
+  padding: 4px;
+  color: white;
+}
+#menu_2 nav li a:hover {
   color: white;
   border-bottom: 2px solid #FBAD18;
   text-decoration: none;
@@ -235,32 +337,6 @@ body {
 
 #slider .carousel-caption p {
 	font-size: 18px;
-}
-
-.solicite_consulta {
-	position: absolute;
-	top: 56%;
-	width: 100%;
-}
-
-.solicite_consulta form {
-	overflow: auto;
-	width: 85%;
-	margin: auto;	
-}
-
-.solicite_consulta div {
-	padding: 1%;
-}
-
-.solicite_consulta div input {
-	padding-left: 4%;
-	height: 38px;
-	width: 100%;
-}
-
-.solicite_consulta div button {
-	width: 85%;
 }
 
 .sobre_empresa {
@@ -782,8 +858,12 @@ body {
 }
 
 #contato {
-	text-align: center;
 	position: relative;
+	margin-top: 3%;
+	color: #525252;
+	font-family: helvetica;
+	padding-left: 6%;
+	padding-bottom: 3%;
 }
 
 #contato h1 {
@@ -797,7 +877,7 @@ body {
 }
 
 #contato h2 {
-	color: #2A251F;
+	color: #525252;
 	font-size: 18px;
 	margin-bottom: 5%;
 }
@@ -805,6 +885,7 @@ body {
 #contato form {
 	text-align: left;
 	overflow: auto;
+	font-family: helvetica;
 }
 
 #contato label {
@@ -813,7 +894,7 @@ body {
 }
 
 #contato .linh_form {
-	padding-bottom: 7%;
+	padding-bottom: 2%;
 }
 
 #contato .linh_form_m {
@@ -823,9 +904,11 @@ body {
 #contato .linh_form input,#contato .linh_form_m input {
 	background: #F7F7F7;
     border: solid 1px #DDDDDD;
-    height: 30px;
-    width: 90%;
+    height: 50px;
+    width: 35%;
 }
+
+#contato .linh_form_m input {width: 50%;}
 
 #contato .linh_form input:focus, 
 #contato .linh_form_m input:focus,
@@ -835,18 +918,35 @@ body {
 
 #contato .linh_form textarea {
 	background: #F7F7F7;
-	width: 90%;
+	width: 75%;
 	border: solid 1px #DDDDDD;
 }
 
 #form_contato .div_btn {
-	text-align: center;
+	text-align: right;
+    margin-right: 25%;
 }
 
 #form_contato .div_btn .btn {
-	padding-left: 6%;
-	padding-right: 6%;
+	padding: 1% 6%;
+	background: #FBAA19;
+	color: white;
 }
+
+.breadcrumb { background-color: transparent;  padding-left: 0px;}
+.breadcrumb ul {
+	display: inline;
+    padding-left: 0px;
+}
+.breadcrumb ul li {
+	display: inline;
+}
+.breadcrumb ul li:first-child {
+	border-right: 1px solid #525252;
+    padding-right: 5px;
+}
+
+.breadcrumb ul li:last-child {color: gray;}
 
 footer {
 	text-align: center;
@@ -892,5 +992,72 @@ footer .endereco p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbd30b', endColorstr='#ed6d23', GradientType=1 );
 }
 
-.right {}
-.left {}
+.solicite_consulta {
+	position: absolute;
+	top: 86%;
+	width: 100%;
+}
+
+.solicite_consulta form {
+	overflow: auto;
+	margin: auto;	
+	font-family: helvetica;
+	margin-left: 20%;
+}
+
+.solicite_consulta div {
+	padding: 0% 0% 1% 0%;
+}
+
+.solicite_consulta div select {
+	padding-left: 14%;
+	height: 45px;
+	width: 84%;
+	font-family: helvetica;
+}
+
+.solicite_consulta div button {
+	width: 86%;
+}
+.solicite_consulta form p {color: white;}
+.solicite_consulta .btn_busca_imovel {
+	background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 6.3% 0% 6.3% 0%;
+}
+
+.div-select {
+    /* width:250px;  Tamanho final do select */
+    /* overflow:hidden; Esconde o conteúdo que passar do tamanho especificado */
+}
+  
+.div-select select {
+      background: url("../img/ico_localizacao.png") no-repeat white;  /* Imagem de fundo (Seta) */
+      background-position: center left 5px;  /*Posição da imagem do background*/
+      font-family: helvetica; /* Fonte do Select */
+      font-size: 14px; /* Tamanho da Fonte */
+      padding:13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+      text-indent: 0.01px; /* Remove seta padrão do FireFox */
+      text-overflow: "";  /* Remove seta padrão do FireFox */     
+      select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
+}
+
+.div-select select option {
+  color: #545454;
+}
+
+.div-select select:focus {
+    outline: none;
+}
+
+.div-select-tipo select {
+      background: url("../img/ico_key.png") no-repeat white;  /* Imagem de fundo (Seta) */
+      background-position: center left 5px;  /*Posição da imagem do background*/
+      font-family: helvetica; /* Fonte do Select */
+      font-size: 14px; /* Tamanho da Fonte */
+      padding:13px 20px 13px 12px; /* Configurações de padding para posicionar o texto no campo */
+      text-indent: 0.01px; /* Remove seta padrão do FireFox */
+      text-overflow: "";  /* Remove seta padrão do FireFox */     
+      select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
+}

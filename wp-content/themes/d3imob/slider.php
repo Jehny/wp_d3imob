@@ -21,11 +21,7 @@
 		if($email != "" && $nome != ""){
 			
 			if(wp_mail( $to, $subject,  $message, $headers)){
-				// $sucesso = "<div class='sucesso alert-info'>
-				// 	<button type='button' class='close' data-dismiss='alert'>×</button>
-				// 	<h4>Sucesso!</h4>
-				// 	<p>Seu e-mail foi enviado com sucesso. </p>
-				// 	</div>";
+				
 				$teste_slider = "<input type='hidden' id='enviado_slider' />";
 				$message_slider = "Seu e-mail foi enviado com sucesso!";
 			}
@@ -64,7 +60,7 @@
 				}
 			?>
 			<!-- Indicators -->
-		 	<ol class="carousel-indicators">
+		 	<!-- <ol class="carousel-indicators">
 		    <?php $i = 0; foreach ($banners as $banner) { 
 						if($i == 0){ ?>
 							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>" class="active"></li>
@@ -72,7 +68,7 @@
 							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>"></li>
 				<?php 	} $i++;?>
 				<?php } ?>
-		  	</ol>
+		  	</ol> -->
 	  	</div>
 	  	<!-- Controls -->
 		 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -87,25 +83,38 @@
 </div>
 <div class="boder_gradiente"></div>
 
-<!-- <div class="container-fluid solicite_consulta hidden-sm hidden-xs">
+<div class="container-fluid solicite_consulta hidden-sm hidden-xs">
 	<form action="" method="post" class="row-fluid"> 
-		<div class="col-md-3">
-			<input type="text" name="nome_consulta" placeholder="O seu nome" required>
+		<p>Pesquise seu imóvel:</p>
+		<div class="col-md-2 div-select">
+			<select name="cidade">
+				<option value="Cidade 1">Cidade 1</option>
+				<option value="Cidade 2">Cidade 2</option>
+				<option value="Cidade 3">Cidade 3</option>
+			</select>
 		</div>
-		<div class="col-md-3">
-			<input type="tel" name="telefone_consulta" placeholder="O seu telefone" class="phone" maxlength="15">
+		<div class="col-md-2 div-select">
+			<select name="bairro">
+				<option value="bairro 1">bairro 1</option>
+				<option value="bairro 2">bairro 2</option>
+				<option value="bairro 3">bairro 3</option>
+			</select>
 		</div>
-		<div class="col-md-3">
-			<input type="email" name="email_consulta" placeholder="O seu e-mail" required>
+		<div class="col-md-2 div-select-tipo">
+			<select name="tipo_imovel">
+				<option value="Tipo 1">Tipo 1</option>
+				<option value="Tipo 2">Tipo 2</option>
+				<option value="Tipo 3">Tipo 3</option>
+			</select>
 		</div>
-		<div class="col-md-3">
-			<button type="submit" name="solicitar_consulta" class="btn btn-vermelho">Solicitar Consulta </button>
+		<div class="col-md-2">
+			<button type="submit" name="solicitar_consulta" class="btn_busca_imovel">Buscar Imóvel </button>
 		</div>
 	</form>
 	<?php if(isset($teste_slider)){
 		echo $teste_slider;
 		} ?>
-</div> -->
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModalSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
