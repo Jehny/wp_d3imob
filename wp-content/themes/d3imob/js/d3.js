@@ -24,14 +24,14 @@ $(document).ready(function(){
 
     var largura = $(window).width();
     var slideW = largura - 300;
-    $("#equipe ul").zAccordion({
-      slideWidth: slideW,
-      width: largura,
-      height: 500,
-      timeout: 3000,
-      trigger: "mouseover",
-      slideClass: "frame"
-  });
+  //   $("#equipe ul").zAccordion({
+  //     slideWidth: slideW,
+  //     width: largura,
+  //     height: 500,
+  //     timeout: 3000,
+  //     trigger: "mouseover",
+  //     slideClass: "frame"
+  // });
 
  $(window).scroll(function () {
   var scrol = $(this).scrollTop();
@@ -121,7 +121,7 @@ $(document).ready(function(){
 
      /* Máscaras ER */
      // $("#telefone").mask("(00) 0000-00009");
-     $(".phone").mask("(99) 9999-9999?9").focusout(function (event) {  
+     $(".phone").mask("(99) 99999-999?9").focusout(function (event) {  
             var target, phone, element;  
             target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
             phone = target.value.replace(/\D/g, '');
@@ -130,10 +130,22 @@ $(document).ready(function(){
             if(phone.length > 10) {  
                 element.mask("(99) 99999-999?9");  
             } else {  
-                element.mask("(99) 9999-9999?9");  
+                element.mask("(99) 99999-999?9");  
             }  
         });
+      // fazer aparecer a sessão de resultado de busca
+     $('.solicitar_consulta_imovel').click(function(event) {
+        console.log("clicou");
+        $('#destaques').removeClass('invisivel');
+     });
 
+     $('.pgwSlideshow').pgwSlideshow();
+
+     // $('.image-gallery').removeClass('thumbnails-5');
+     // $('.image-gallery').removeClass('linked');
+     $('.image-gallery').addClass('pgwSlideshow');
+     
+    
 
 /* link para o acordion slider 
 http://www.armagost.com/zaccordion/*/

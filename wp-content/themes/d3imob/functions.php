@@ -287,5 +287,37 @@ function show_message_function( $comment_ID, $comment_approved ) {
 }
 // add_action( 'comment_post', 'show_message_function', int $comment_ID, int $comment_approved );
 
+// add_action('init', 'gallery_registrer');
+// function gallery_registrer() {
+// 	$labels = array (
+// 		'name' => _x('Galeria de Fotos', 'post type general name'),
+// 		'singular_name' => _x('Foto', 'post type singular name'),
+// 		'add_new' => _x('Adicionar fotos', 'fotos'),
+// 		'add_new_item' => __('Adicionar nova foto'),
+// 		'edit_item' => __('Editar foto'),
+// 		'new_item' => __('Nova foto'),
+// 		'view_item' => __('Ver foto'),
+// 		'search_items' => __('Procurar foto'),
+// 		'not_found' => __('Nada encontrado'),
+// 		'not_found_in_trash' => __('Nada encontrado no lixo'),
+// 		'parent_item_colon' => '';
+// 		);
+// 	$args = array(
+// 		'labels' => $labels,
+// 		'public' => true,
+// 		'public_queryable' => true,
+// 		'show_ui' => true,
+// 		'query_var' => true,
+// 		'rewrite' => true,
+// 		'capability_type' => 'post',
+// 		'hierarchical' => false,
+// 		'rewrite' => array('slug'=>'fotos'),
+// 		'menu_position' => 6,
+// 		'supports' => array('title', 'thumbnail'),
+// 		);
+// 	register_post_type('gallery', $args);
+// }
+
+
 
 ?>

@@ -53,7 +53,7 @@
 	<div class="textos">
 		<p class="titulo"><?php echo $banner_texto_titulo; ?></p>
 		<p class="descricao"><?php echo $banner_texto_descricao; ?></p>
-		<p class="botao"><a href="">Entre em contato!</a></p>
+		<p class="botao"><a href="<?php echo get_home_url(); ?>/contato">Entre em contato!</a></p>
 		
 	</div>
 </div>

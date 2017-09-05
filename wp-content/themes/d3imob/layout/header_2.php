@@ -6,10 +6,11 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/dimob.css" type="text/css" />
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/medias.css" type="text/css" />
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/icon_fonts.css" type="text/css" />
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/barousel.css" type="text/css" />
 		
 		<script src="<?php bloginfo('template_url'); ?>/js/jquery-3.0.0.min.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/js/jquery.zaccordion.min.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/jquery.barousel.min.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/jquery.easing.min.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/jquery.maskedinput.js"></script>
 		<script src="<?php bloginfo('template_url'); ?>/js/d3.js"></script>
@@ -63,12 +64,12 @@
 			    </div>
 				<nav id="navbar-collapse" class="collapse navbar-collapse nav_cel">
 					<ul class="text-uppercase nav navbar-nav col-xs-8 col-sm-6 col-md-6">
-						<li><a href="#redes" class="scroll" data-offset="85" id="home_link">Home</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/#sobre_empresa" id="empresa_link" class="scroll" data-offset="60">D3imob</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/#expertises" id="expertises_link" class="scroll" data-offset="60">Imóveis</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/#noticias_notas" id="noticias_link" class="scroll" data-offset="60">Blog</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/#time" id="time_link" class="scroll" data-offset="60">Consultores</a></li>
-						<li><a href="#contato" id="contato_link" class="scroll" data-offset="60">Contato</a></li>
+						<li><a href="<?php echo get_home_url(); ?>">Home</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/#sobre_empresa">D3imob</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/#destaques">Imóveis</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/blog">Blog</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/#time">Consultores</a></li>
+						<li><a href="<?php echo get_home_url(); ?>/contato">Contato</a></li>
 
 					</ul>
 					<div class="col-md-2 contato_header">

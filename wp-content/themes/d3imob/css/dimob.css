@@ -451,13 +451,13 @@ body {
 
 }
 
-#destaques {
+#destaques, .result_busca_imovel {
 	padding-top: 3%;
 	overflow: auto;
 	padding-bottom: 3%;
 }
 
-#destaques h1 {
+#destaques h1, .result_busca_imovel h1 {
 	font-size: 24px;
 	color: #535353;
 	text-align: center;
@@ -477,7 +477,7 @@ body {
     margin-bottom: 0;
 }
 
-#destaques .subtitulo {
+#destaques .subtitulo, .result_busca_imovel .subtitulo {
 	color: #545454;
 	font-size: 17px;
 	text-align: center;
@@ -485,37 +485,46 @@ body {
 	font-family: helvetica;
 }
 
-#destaques .imoveis { text-align: center; font-family: helvetica; padding-top: 3%; }
-#destaques .imoveis .item { text-align: center;  margin-top:3%;}
+#destaques .imoveis, .result_busca_imovel .imoveis { text-align: center; font-family: helvetica; padding-top: 3%; }
+#destaques .imoveis .item, .result_busca_imovel .imoveis .item{ text-align: center;  margin-top:3%;}
 #destaques .imoveis .item .imagem {}
-#destaques .imoveis .item .imagem img { width: 100%; }
-#destaques .imoveis .item .titulo { 
+#destaques .imoveis .item .imagem img, .result_busca_imovel .imoveis .item .imagem img { 
+	width: 190px;
+    height: 137px; 
+}
+#destaques .imoveis .item .titulo, .result_busca_imovel .imoveis .item .titulo { 
 	color: #3E3E3F;
 	font-size: 14px;
 	font-weight: 700;
 	padding: 0% 5%;
+	height: 40px;
  }
-#destaques .imoveis .item .valor {
+#destaques .imoveis .item .valor, .result_busca_imovel .imoveis .item .valor {
 	color: #FBAD18;
 	font-size: 15px;
 	font-weight: 600;
 }
-#destaques .imoveis .item .endereco {
+#destaques .imoveis .item .endereco, .result_busca_imovel .imoveis .item .endereco {
 	font-size: 12px;
 	color: #3E3E3F;
 	padding: 0% 5%;	
+	height: 60px;
 }
-#destaques .imoveis .item .endereco i { color: #FBAD18; font-size: 18px;}
+#destaques .imoveis .item .endereco i, .result_busca_imovel .imoveis .item .endereco i { color: #FBAD18; font-size: 18px;}
 #destaques .imoveis .item .endereco .texto {} 
-#destaques .imoveis .item .detalhe { 
+#destaques .imoveis .item .detalhe, .result_busca_imovel .imoveis .item .detalhe { 
 	background: #FBAD18;
 	color: white; 
 	padding: 5%;
     font-size: 16px;
 }
-#destaques .imoveis .item .detalhe i {
+#destaques .imoveis .item .detalhe i, .result_busca_imovel .imoveis .item .detalhe i {
 	color: white;
 }
+#destaques .imoveis .item .detalhe a, .result_busca_imovel .imoveis .item .detalhe a { color:  white; text-decoration: none;
+}
+.invisivel {display: none;}
+.result_busca_imovel #destaques .imoveis {padding-top: 0%;}
 
 .bg_newslatter { 
 	background: url("../img/bg_newsletter.png") repeat-x; 
@@ -857,9 +866,21 @@ body {
 	color: #D05762;
 }
 
+#equipe .foto {
+	height: 17%;
+    width: 50%;
+    margin: auto;
+}
+#equipe .foto img {
+	width: 38%;
+    height: 70%;
+    border-radius: 100px;
+    border: 2px solid #FBAD18;
+}
+
 #contato {
 	position: relative;
-	margin-top: 3%;
+	margin-top: 2%;
 	color: #525252;
 	font-family: helvetica;
 	padding-left: 6%;
@@ -933,20 +954,25 @@ body {
 	color: white;
 }
 
-.breadcrumb { background-color: transparent;  padding-left: 0px;}
-.breadcrumb ul {
+.breadcrumb_custom { 
+	background-color: #F9F9F9;
+    padding-left: 6.2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.breadcrumb_custom ul {
 	display: inline;
     padding-left: 0px;
 }
-.breadcrumb ul li {
+.breadcrumb_custom ul li {
 	display: inline;
 }
-.breadcrumb ul li:first-child {
+.breadcrumb_custom ul li:first-child {
 	border-right: 1px solid #525252;
     padding-right: 5px;
 }
 
-.breadcrumb ul li:last-child {color: gray;}
+.breadcrumb_custom ul li:last-child {color: gray;}
 
 footer {
 	text-align: center;
@@ -1027,6 +1053,16 @@ footer .endereco p {
     padding: 6.3% 0% 6.3% 0%;
 }
 
+.post { width: 92%; margin: auto;}
+.post .titulo {}
+.post .titulo .nome h1 { color: #525252; font-size: 24px; }
+.post .titulo .nome .valor { color: #525252; font-size: 18px;}
+.post .titulo .nome .valor span { color: #FAAA19; }
+.post .corpo { padding-top: 2%; padding-bottom: 2%;}
+.post .corpo h2 {color:#525252; font-size: 18px;}
+.post .corpo .detalhe .texto {color: #5D5D5D;}
+.post .corpo .informacoes .texto{color: #5D5D5D;}
+
 .div-select {
     /* width:250px;  Tamanho final do select */
     /* overflow:hidden; Esconde o conteúdo que passar do tamanho especificado */
@@ -1060,4 +1096,8 @@ footer .endereco p {
       text-indent: 0.01px; /* Remove seta padrão do FireFox */
       text-overflow: "";  /* Remove seta padrão do FireFox */     
       select::-ms-expand {display: none;} /* Remove seta padrão do IE*/
+}
+
+.pgwSlideshow .ps-current, .pgwSlideshow .ps-current > ul  > li img {
+	max-height: 500px;
 }

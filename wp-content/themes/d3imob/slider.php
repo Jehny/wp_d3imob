@@ -1,33 +1,58 @@
 <?php 
-	if(isset($_POST['solicitar_consulta'])){
-		$to = 'cgfjuridico@cgfjuridico.com.br';
-		$nome = $_POST['nome_consulta'];
-		$email = $_POST['email_consulta'];
-		$tel = $_POST['telefone_consulta'];
-		$subject = "Consulta CGF Jurídico ";
-		$headers = "MIME-Version: 1.1 \r\n";
-		$headers .= "Content-type: text/html; charset=utf-8 \r\n";
-		$message = "<html><body>";
-		$message .= "<table style='border:1px solid #BD3F4B;width:97%;'>";
-		$message .= "<tr><td style='text-align:left;padding-left:10px;padding-top:20px;'><img src='http://www.cgfjuridico.com.br/wp-content/themes/cgf/img/logo.png' alt='CGF Jurídico' width=200></td></tr>";
-		$message .= "<tr><td style='padding-left:10px;padding-top:20px;padding-bottom:20px;'>Segue os dados de contato: </td></tr>";
-		$message .= "<tr><td style='padding-left:10px;'><strong>Assunto: </strong>Solicitação de consulta.</td></tr>";
-		$message .= "<tr><td style='padding-left:10px;'><strong>Nome: </strong>" . $nome . "</td></tr>";
-		$message .= "<tr><td style='padding-left:10px;'><strong>E-mail: </strong>" . $email. "</td></tr>";
-		$message .= "<tr><td style='padding-left:10px;'><strong>Telefone: </strong>" . $tel. "</td></tr>";
-		$message .= "</table>";
-		$message .= "</body></html>";
+	$display = "invisivel";
 
-		if($email != "" && $nome != ""){
-			
-			if(wp_mail( $to, $subject,  $message, $headers)){
-				
-				$teste_slider = "<input type='hidden' id='enviado_slider' />";
-				$message_slider = "Seu e-mail foi enviado com sucesso!";
-			}
-		}
+	if(isset($_POST['solicitar_consulta_imovel'])){
+		$c =  $_POST['cidade'];
+		$b =  $_POST['bairro'];
+		$t =  $_POST['tipo_imovel'];
+
+		$display = "visivel";
+		$args2 = array(
+			'posts_per_page'   => 10,
+			'offset'           => 0,
+			'category'         => '',
+			'category_name'    => '',
+			'orderby'          => '',
+			'order'            => 'ASC',
+			'include'          => '',
+			'exclude'          => '',
+			'meta_key'         => 'bairro',
+			'meta_value'       => $b,
+			'meta_key'         => 'cidade',
+			'meta_value'       => $c,
+			'meta_key'         => 'tipo',
+			'meta_value'       => $t,
+			'post_type'        => 'imovel',
+			'post_mime_type'   => '',
+			'post_parent'      => '',
+			'author'	   	   => '',
+			'post_status'      => 'publish',
+			'suppress_filters' => true 
+		);
+
+		$imoveis_home2 = get_posts($args2);
 	}
 
+
+$args = array(
+		'posts_per_page'   => 10,
+		'offset'           => 0,
+		'category'         => '',
+		'category_name'    => '',
+		'orderby'          => '',
+		'order'            => 'ASC',
+		'include'          => '',
+		'exclude'          => '',
+		'meta_key'         => '',
+		'meta_value'       => '',
+		'post_type'        => 'imovel',
+		'post_mime_type'   => '',
+		'post_parent'      => '',
+		'author'	   	=> '',
+		'post_status'      => 'publish',
+		'suppress_filters' => true 
+	);
+	$imoveis_home = get_posts($args);
 ?>
 <div id="slider" class="hidden-xs">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -59,16 +84,7 @@
 					}
 				}
 			?>
-			<!-- Indicators -->
-		 	<!-- <ol class="carousel-indicators">
-		    <?php $i = 0; foreach ($banners as $banner) { 
-						if($i == 0){ ?>
-							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>" class="active"></li>
-				<?php	} else { ?>
-							<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>"></li>
-				<?php 	} $i++;?>
-				<?php } ?>
-		  	</ol> -->
+			
 	  	</div>
 	  	<!-- Controls -->
 		 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -83,53 +99,177 @@
 </div>
 <div class="boder_gradiente"></div>
 
+<div class="result_busca_imovel">
+	<section class="container-fluid <?php echo $display; ?>">
+		<div class="col-xs-12 col-sm-12 col-md-12 subtitulo">
+			<p>Resultado da busca:</p>
+		</div>
+		<div class="imoveis row-fluid">
+			<?php if($imoveis_home2){ 
+				$i = 1;
+				foreach ($imoveis_home2 as $imoveis_item2) {
+					$miniatura = get_field('miniatura', $imoveis_item2->ID);
+					$titulo = get_field('titulo', $imoveis_item2->ID);
+					$valor = get_field('valor', $imoveis_item2->ID);
+					$localizacao = get_field('localizacao', $imoveis_item2->ID);
+					if($i==1 || $i==6){  
+
+			?>
+				<div class="row-fluid">
+						<div class="item col-md-2 col-md-offset-1">
+							<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
+							<p class="titulo"><?php echo $titulo; ?></p>
+							<p class="valor"><?php echo $valor; ?></p>
+							<p class="endereco">
+								<span><i class="icon-location2"></i></span>
+								<span class="texto"><?php echo $localizacao; ?> </span>
+							</p>
+							<p class="detalhe">
+								<span><i class="icon-plus"></i></span>
+								<a href="<?php echo get_permalink($imoveis_item2->ID);?>">detalhes</a>
+							</p>
+						</div>
+			<?php	$i++; } else if($i==5){ ?>
+						<div class="item col-md-2">
+							<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
+							<p class="titulo"><?php echo $titulo?></p>
+							<p class="valor"><?php echo $valor?></p>
+							<p class="endereco">
+								<span><i class="icon-location2"></i></span>
+								<span class="texto"><?php echo $localizacao?> </span>
+							</p>
+							<p class="detalhe">
+								<span><i class="icon-plus"></i></span>
+								<a href="<?php echo get_permalink($imoveis_item2->ID);?>">detalhes</a>
+							</p>
+						</div>
+					</div>
+			<?php
+				$i++; 	} else {
+			?>
+						<div class="item col-md-2">
+							<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
+							<p class="titulo"><?php echo $titulo?></p>
+							<p class="valor"><?php echo $valor?></p>
+							<p class="endereco">
+								<span><i class="icon-location2"></i></span>
+								<span class="texto"><?php echo $localizacao?> </span>
+							</p>
+							<p class="detalhe">
+								<span><i class="icon-plus"></i></span>
+								<a href="<?php echo get_permalink($imoveis_item2->ID);?>">detalhes</a>
+							</p>
+						</div>
+			<?php 
+					 $i++;
+					}
+
+				}
+			} else {
+				echo "<p> Nenhum resultado encontrado!</p>";
+			}
+			?>
+			
+
+		</div>
+	</section>
+</div>
+
 <div class="container-fluid solicite_consulta hidden-sm hidden-xs">
 	<form action="" method="post" class="row-fluid"> 
 		<p>Pesquise seu imóvel:</p>
 		<div class="col-md-2 div-select">
 			<select name="cidade">
-				<option value="Cidade 1">Cidade 1</option>
-				<option value="Cidade 2">Cidade 2</option>
-				<option value="Cidade 3">Cidade 3</option>
+				<option value="">Cidade</option>
+				<?php
+					if($imoveis_home){
+						$array_cidade = array();
+						foreach ($imoveis_home as $imoveis_item) {
+							$cidade = get_field('cidade', $imoveis_item->ID);
+							if($cidade !=""){
+								array_push($array_cidade, $cidade);
+							}
+						}
+					}
+							$result = array_unique($array_cidade);
+							if($result !=""){
+								foreach ($result as $cit) {
+									if($c == $cit){
+				?>
+										<option value="<?php echo $cit; ?>" selected><?php echo $cit; ?></option>
+				<?php 				} else { ?>
+										<option value="<?php echo $cit; ?>"><?php echo $cit; ?></option>
+				<?php
+									}
+							}
+						}
+					
+				?>
+				
 			</select>
 		</div>
 		<div class="col-md-2 div-select">
 			<select name="bairro">
-				<option value="bairro 1">bairro 1</option>
-				<option value="bairro 2">bairro 2</option>
-				<option value="bairro 3">bairro 3</option>
+				<option value="">Bairro</option>
+				<?php
+					if($imoveis_home){
+						$array_bairro = array();
+						foreach ($imoveis_home as $imoveis_item) {
+							$bairro = get_field('bairro', $imoveis_item->ID);
+							if($bairro !=""){
+								array_push($array_bairro, $bairro);
+							}
+						}
+					}
+							$result = array_unique($array_bairro);
+							if($result !=""){
+								foreach ($result as $bair) {
+									if($b == $bair){
+				?>
+										<option value="<?php echo $bair; ?>" selected><?php echo $bair; ?></option>
+				<?php 				} else { ?>
+										<option value="<?php echo $bair; ?>"><?php echo $bair; ?></option>
+				<?php
+									}
+							}
+						}
+					
+				?>
 			</select>
 		</div>
 		<div class="col-md-2 div-select-tipo">
 			<select name="tipo_imovel">
-				<option value="Tipo 1">Tipo 1</option>
-				<option value="Tipo 2">Tipo 2</option>
-				<option value="Tipo 3">Tipo 3</option>
+				<option value="">Tipo</option>
+				<?php
+					if($imoveis_home){
+						$array_tipo = array();
+						foreach ($imoveis_home as $imoveis_item) {
+							$tipo = get_field('tipo', $imoveis_item->ID);
+							if($tipo !=""){
+								array_push($array_tipo, $tipo);
+							}
+							
+						}
+					}
+							$result = array_unique($array_tipo);
+							if($result !=""){
+								foreach ($result as $tip) {
+									if($t == $tip){
+				?>
+										<option value="<?php echo $tip; ?>" selected><?php echo $tip; ?></option>
+				<?php 				} else { ?>
+										<option value="<?php echo $tip; ?>"><?php echo $tip; ?></option>
+				<?php
+									}
+							}
+						}
+					
+				?>
 			</select>
 		</div>
 		<div class="col-md-2">
-			<button type="submit" name="solicitar_consulta" class="btn_busca_imovel">Buscar Imóvel </button>
+			<button type="submit" name="solicitar_consulta_imovel" class="btn_busca_imovel">Buscar Imóvel </button>
 		</div>
 	</form>
-	<?php if(isset($teste_slider)){
-		echo $teste_slider;
-		} ?>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModalSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sucesso!</h4>
-      </div>
-      <div class="modal-body">
-        <?php if(isset($message_slider)){ echo $message_slider; } ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-vermelho" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
+	
 </div>

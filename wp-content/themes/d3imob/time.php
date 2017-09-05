@@ -26,19 +26,19 @@
 			<div class="traco"><hr></div>
 			<div class="col-xs-12 col-sm-12 col-md-12 item">
 				<div class="col-md-4">
-					<p class="foto"><?php echo $foto_rita; ?></p>
+					<p class="foto"><img src="<?php echo $foto_rita['url']; ?>" alt="<?php echo $foto_rita['alt']; ?>" /></p>
 					<p class="nome"><?php echo $rita; ?></p>
 					<p class="creci"><?php echo $creci_rita; ?></p>
 					<p class="tel"><?php echo $telefone_rita; ?></p>
 				</div>
 				<div class="col-md-4">
-					<p class="foto"><?php echo $foto_cris; ?></p>
+					<p class="foto"><img src="<?php echo $foto_cris['url']; ?>" alt="<?php echo $foto_cris['alt']; ?>" /></p>
 					<p class="nome"><?php echo $cris; ?></p>
 					<p class="creci"><?php echo $creci_cris; ?></p>
 					<p class="tel"><?php echo $telefone_cris; ?></p>
 				</div>
 				<div class="col-md-4">
-					<p class="foto"><?php echo $foto_rogaciano; ?></p>
+					<p class="foto"><img src="<?php echo $foto_rogaciano['url']; ?>" alt="<?php echo $foto_rogaciano['alt']; ?>" /></p>
 					<p class="nome"><?php echo $rogaciano; ?></p>
 					<p class="creci"><?php echo $creci_rogaciano; ?></p>
 					<p class="tel"><?php echo $telefone_rogaciano; ?></p>

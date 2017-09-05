@@ -1,16 +1,16 @@
 <?php
 	if(isset($_POST['submit'])){
 
-			$to = 'cgfjuridico@cgfjuridico.com.br';
+			$to = 'd3imob@gmail.com';
 			$nome = $_POST['nome'];
 			$email = $_POST['email'];
 			$tel = $_POST['telefone'];
-			$subject = "Contato CGF Jurídico - ". $_POST['assunto'];
+			$subject = "Contato D3imob - ". $_POST['assunto'];
 			$headers = "MIME-Version: 1.1 \r\n";
 			$headers .= "Content-type: text/html; charset=utf-8 \r\n";
 			$message = "<html><body>";
 			$message .= "<table style='border:1px solid #BD3F4B;width:97%;'>";
-			$message .= "<tr><td style='text-align:left;padding-left:10px;padding-top:20px;'><img src='http://www.cgfjuridico.com.br/wp-content/themes/cgf/img/logo.png' alt='CGF Jurídico' width=200></td></tr>";
+			$message .= "<tr><td style='text-align:left;padding-left:10px;padding-top:20px;'><img src='http://www.d3imob.com.br/wp-content/themes/cgf/img/logo.png' alt='D3imob' width=200></td></tr>";
 			$message .= "<tr><td style='padding-left:10px;padding-top:20px;padding-bottom:20px;'>Segue os dados de contato: </td></tr>";
 			$message .= "<tr><td style='padding-left:10px;'><strong>Assunto: </strong>" . $_POST['assunto']. "</td></tr>";
 			$message .= "<tr><td style='padding-left:10px;'><strong>Nome: </strong>" . $nome . "</td></tr>";
@@ -22,10 +22,10 @@
 
 			if($email != "" && $message != "" && $nome != ""){
 				
-				if(wp_mail( $to, $subject,  $message, $headers)){
+				// if(wp_mail( $to, $subject,  $message, $headers)){
 					$teste = "<input type='hidden' id='enviado' />";
 					$message = "Seu e-mail foi enviado com sucesso!";
-				}
+				// }
 			}
 		}
 ?>
@@ -41,13 +41,14 @@
 ?>
 
 <div class="bg_body">
+	<div class="breadcrumb_custom">
+		<ul>
+			<li>Home</li>
+			<li>Contato</li>
+		</ul>
+	</div>
 	<section class="container-fluid" id="contato">
-		<div class="breadcrumb">
-			<ul>
-				<li>Home</li>
-				<li>Contato</li>
-			</ul>
-		</div>
+		
 		<h2>Nesta página você poderá solicitar informações, sugerir e opinar sobre o nosso site.  Estamos aqui para ajudar.</h2>
 		<div class="row-fluid" id="form_contato">
 			<form action="" method="POST">
@@ -98,7 +99,7 @@
         <?php if(isset($message)){ echo $message; } ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-vermelho" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
