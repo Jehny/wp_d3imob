@@ -7,10 +7,10 @@
 		$headers = "MIME-Version: 1.1 \r\n";
 		$headers .= "Content-type: text/html; charset=utf-8 \r\n";
 		$message = "<html><body>";
-		$message .= "<table style='border:1px solid #BD3F4B;width:97%;'>";
-		$message .= "<tr><td style='text-align:left;padding-left:10px;padding-top:20px;'><img src='http://www.d3imob.com.br/wp-content/themes/cgf/img/logo.png' alt='D3imob' width=200></td></tr>";
-		$message .= "<tr><td style='padding-left:10px;padding-top:20px;padding-bottom:20px;'>Segue os dados de contato: </td></tr>";
-		$message .= "<tr><td style='padding-left:10px;'><strong>Assunto: </strong>Solicitação de consulta.</td></tr>";
+		$message .= "<table style='border:1px solid #FBAD18;width:97%;'>";
+		$message .= "<tr><td style='text-align:left;padding-left:10px;padding-top:20px;'><img src='http://www.d3imob.com.br/wp-content/themes/d3imob/img/logo_login.png' alt='D3imob' width=200></td></tr>";
+		$message .= "<tr><td style='padding-left:10px;padding-top:20px;padding-bottom:20px;'>Segue os dados de contato de Newsletter: </td></tr>";
+		$message .= "<tr><td style='padding-left:10px;'><strong>Assunto: </strong>Newsletter.</td></tr>";
 		
 		$message .= "<tr><td style='padding-left:10px;'><strong>E-mail: </strong>" . $email. "</td></tr>";
 		
@@ -22,11 +22,11 @@
 			$dados = array('email'=> $email);
 			$wpdb->insert( $table, $dados, $format );
 			
-			// if(wp_mail( $to, $subject,  $message, $headers)){
+			if(wp_mail( $to, $subject,  $message, $headers)){
 				
 				$teste_slider = "<input type='hidden' id='enviado_slider' />";
 				$message_slider = "Seu e-mail foi enviado com sucesso!";
-			// }
+			}
 		}
 	}
 

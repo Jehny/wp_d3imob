@@ -24,9 +24,9 @@
       	
 		<div class="menu_home">
 			<div id="menu" class="navbar navbar-default navbar-header row-fluid">
-				<div class="logo col-xs-4 col-sm-3 col-md-4">
-					<h1><a href="#redes"><img src="<?php bloginfo('template_url'); ?>/img/logo_header.png" data-offset="85" class="logo_h logo_h_n_fixed img-responsive hidden-xs scroll"></a></h1>
-					<h1><a href="#redes"><img src="<?php bloginfo('template_url'); ?>/img/logo_header_branca.png" data-offset="85" class="logo_h_fixed img-responsive scroll"></a></h1>
+				<div class="logo col-xs-4 col-sm-2 col-md-4">
+					<h1><a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo_header.png" data-offset="85" class="logo_h logo_h_n_fixed img-responsive hidden-xs scroll"></a></h1>
+					<h1><a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo_header_branca.png" data-offset="85" class="logo_h_fixed img-responsive scroll"></a></h1>
 					<!-- <h1><a href=""><img src="<?php bloginfo('template_url'); ?>/img/logo_header_branca.png" class="img-responsive visible-xs"></a></h1> -->
 				</div>
 				<div class="navbar-header nav_cel_header">
@@ -39,16 +39,16 @@
 			        </button>
 			    </div>
 				<nav id="navbar-collapse" class="collapse navbar-collapse nav_cel">
-					<ul class="text-uppercase nav navbar-nav col-xs-8 col-sm-6 col-md-6">
+					<ul class="text-uppercase nav navbar-nav col-xs-12 col-sm-7 col-md-6">
 						<li><a href="<?php echo get_home_url(); ?>">Home</a></li>
 						<li><a href="#sobre_empresa" id="empresa_link" class="scroll" data-offset="60">D3imob</a></li>
 						<li><a href="#destaques" id="expertises_link" class="scroll" data-offset="60">Imóveis</a></li>
-						<li><a href="<?php bloginfo('template_url'); ?>/blog" id="noticias_link" class="scroll" data-offset="60">Blog</a></li>
+						<li><a href="http://www.d3imob.com.br/blog">Blog</a></li>
 						<li><a href="#time" id="time_link" class="scroll" data-offset="60">Consultores</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/contato">Contato</a></li>
 
 					</ul>
-					<ul class="list-inline redes_sociais col-md-2">
+					<ul class="list-inline redes_sociais col-xs-12 col-sm-3 col-md-2">
 						<?php
 							$redes = get_posts('post_type=redes_sociais');
 							$facebook = "";

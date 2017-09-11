@@ -188,10 +188,10 @@ body {
 }
 
 .menu_2 .bg_menu {
-	background: #535353 !important;
+	/* background: #535353 !important; */
 }
 
-.menu_2 {background-color: #535353 !important;}
+/* .menu_2 {background-color: #535353 !important;} */
 #menu {
   padding-bottom: 1%;
   margin: 0;
@@ -239,7 +239,7 @@ body {
   border-radius: 0;
   border-color: transparent;
   position: relative;
-  background-color:transparent; 
+  background-color:#535353; 
   /* top: 37px; */
 }
 #menu_2 .logo_2 {
@@ -268,6 +268,7 @@ body {
   text-decoration: none;
 }
 
+.banner {position: relative;}
 
 #slider {
 	/* border-bottom: 4px solid #FBAD18; */
@@ -454,7 +455,6 @@ body {
 #destaques, .result_busca_imovel {
 	padding-top: 3%;
 	overflow: auto;
-	padding-bottom: 3%;
 }
 
 #destaques h1, .result_busca_imovel h1 {
@@ -529,6 +529,7 @@ body {
 .bg_newslatter { 
 	background: url("../img/bg_newsletter.png") repeat-x; 
 	min-height: 330px;
+	margin-top: 3%;
 }
 .newsletter { 
 	color: white; 
@@ -801,6 +802,7 @@ body {
 	margin-top: 3%;
 	background: url("../img/bg_time.png");
 	padding-bottom: 3%;
+	background-size: cover;
 }
 #equipe .traco {
 	margin-top: -11px;
@@ -867,13 +869,14 @@ body {
 }
 
 #equipe .foto {
-	height: 17%;
+	height: 15%;
     width: 50%;
     margin: auto;
+    margin-bottom: 4%;
 }
-#equipe .foto img {
-	width: 38%;
-    height: 70%;
+#equipe img {
+	width: 100px;
+    height: 100px;
     border-radius: 100px;
     border: 2px solid #FBAD18;
 }
@@ -1020,7 +1023,7 @@ footer .endereco p {
 
 .solicite_consulta {
 	position: absolute;
-	top: 86%;
+	top: 73%;
 	width: 100%;
 }
 
@@ -1101,3 +1104,7 @@ footer .endereco p {
 .pgwSlideshow .ps-current, .pgwSlideshow .ps-current > ul  > li img {
 	max-height: 500px;
 }
+
+.navbar-default .navbar-toggle {background-color: #efebeb;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #efebeb;}
+.navbar-default .navbar-toggle .icon-bar{background-color: #ED6E23}

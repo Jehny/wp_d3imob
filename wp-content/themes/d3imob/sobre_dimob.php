@@ -48,7 +48,7 @@
 	</div>
 </section>
 
-<div class="sobre_banner_contato">
+<div class="sobre_banner_contato hidden-xs">
 	<img src="<?php echo $banner_sobre['url']; ?>" alt="<?php echo $banner_sobre['alt']; ?>" />
 	<div class="textos">
 		<p class="titulo"><?php echo $banner_texto_titulo; ?></p>

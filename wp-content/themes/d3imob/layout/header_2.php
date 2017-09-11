@@ -51,7 +51,8 @@
 		<div class="menu_home_2">
 			<div id="menu_2" class="navbar navbar-default navbar-header menu_2">
 				<div class="logo_2 col-xs-4 col-sm-3 col-md-4">
-					<h1><a href="#redes"><img src="<?php bloginfo('template_url'); ?>/img/logo_footer.png" data-offset="85" class="img-responsive hidden-xs"></a></h1>
+					<h1><a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo_footer.png" data-offset="85" class="img-responsive hidden-xs"></a></h1>
+					<h1><a href="<?php echo get_home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logoMobile.png" data-offset="85" class="img-responsive hidden-md hidden-sm hidden-lg"></a></h1>
 				</div>
 				<div class="navbar-header nav_cel_header">
 			        <button type="button" class="navbar-toggle nav_cel_button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -63,16 +64,16 @@
 			        </button>
 			    </div>
 				<nav id="navbar-collapse" class="collapse navbar-collapse nav_cel">
-					<ul class="text-uppercase nav navbar-nav col-xs-8 col-sm-6 col-md-6">
+					<ul class="text-uppercase nav navbar-nav col-xs-12 col-sm-6 col-md-6">
 						<li><a href="<?php echo get_home_url(); ?>">Home</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/#sobre_empresa">D3imob</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/#destaques">Imóveis</a></li>
-						<li><a href="<?php echo get_home_url(); ?>/blog">Blog</a></li>
+						<li><a href="http://www.d3imob.com.br/blog">Blog</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/#time">Consultores</a></li>
 						<li><a href="<?php echo get_home_url(); ?>/contato">Contato</a></li>
 
 					</ul>
-					<div class="col-md-2 contato_header">
+					<div class="col-md-2 col-sm-3 hidden-xs contato_header">
 						<p class="texto">Entre em contato!</p>
 						<i class="icon-phone"></i><p class="tel">(85) 99749.1539</p>
 					</div>

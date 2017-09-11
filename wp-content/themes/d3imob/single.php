@@ -17,6 +17,7 @@
 					 $descricao_detalhe = get_field('descricao_detalhe', get_the_ID());
 					 $informacoes_sobre_imovel = get_field('informacoes_sobre_imovel', get_the_ID());
 					 $localizacao = get_field('localizacao', get_the_ID());
+					 $mapa = get_field('mapa', get_the_ID());
 			?>
 					<div class="post">
 						
@@ -47,7 +48,7 @@
 								<h2>Localização</h2>
 								<div class="map">
 									
-									
+									<?php  echo $mapa; ?>
 								</div>
 								
 							</div>					

@@ -14,26 +14,51 @@
 	#equipe .perfil .foto_time img {height: 400px;}
 	#equipe .perfil {overflow: auto; margin-bottom: 3%;	}
 	#equipe .texto { text-align: left;}
+	#menu_2 nav li {padding: 0.5% 0.9%;}
+	.cabecalho .nav > li {font-size: 12px !important;}
+
 }
 
 @media screen and (max-width: 768px){
-	#menu nav li {padding: 0.5% 2%;}
-	.expertises_bg h2 {width: 90%;}
+	#menu nav li {padding: 0.5% 1%;}
+	.cabecalho .nav > li { font-size: 13px; }
+	.cabecalho .redes_sociais li i { font-size: 1.2em; }
+	.logo_h {margin-top: 13%;}
+	#contato h2 {font-size: 14px;}
+	.time, #equipe {background-size: cover; }
+	.solicite_consulta {top: 73%;}
+	.solicite_consulta form {margin-left: 12%;}
+	#contato .linh_form input, #contato .linh_form_m input { width: 100%;}
+	#contato .linh_form textarea {width: 100%;}
+	#form_contato .div_btn {margin-right: 5%;}
+	#form_contato .div_btn .btn {padding: 1% 9%;}
+
 }
 
 @media screen and (max-width: 767px) {
 
 	.navbar-header {
-		background: #C12232;
+		background: #fdc353;
+		height: 56px;
 	}
 	.navbar {
 		border: none;
 	} 
 
 	#navbar-collapse {
-		background-color: #C12232;
-	    width: 38%;
+		background-color: #FBAD18;
+	    width: 50%;
 	    float: right;
+	    height: 220px;
+	}
+
+	.menu_home_2 {
+		overflow: inherit;
+	}
+
+	#menu_2 #navbar-collapse {
+		position: absolute;
+    	right: 0;
 	}
 
 	.nav_cel_button {margin-top: 15px;}
@@ -45,7 +70,10 @@
 
 	.nav_cel_button {width: 8%; background-color: white;}
 	.icon-bar {width: 100% !important;}
-	.navbar-default .navbar-collapse, .navbar-default .navbar-form { height: 250px;}
+	#menu .navbar-default .navbar-collapse, #menu .navbar-default .navbar-form { height: 270px;}
+
+	.cabecalho .redes_sociais{top: 66%;}
+	#menu_2 {background-color: transparent;}
 
 	@media screen and (width: 768px){
 		.separador_footer {width: 7.5%;}
@@ -66,12 +94,14 @@
 	}
 
 	.solicite_consulta {
-		top: 40%;
+		margin-top: 18%;
 	}
-
+	.solicite_consulta .btn_busca_imovel{background: orange;  padding: 4.3% 0% 4.3% 0%;}
+	.solicite_consulta div button {width: 84%;}
 	.sobre_empresa .valores .texto {
 		padding: 0% 10% 0% 10%;
 	}
+	.result_busca_imovel {margin-top: 53%;}
 
 	.time, #equipe {
 		overflow: auto;
@@ -94,6 +124,12 @@
 		.nav_cel_button {width: 6%;}
 		.sobre_empresa {margin-top: 6%;}
 		.logo_h_fixed {display: block; width: 125px;}
+		#menu {top: 3px;}
+		.navbar-nav {margin: 5% 1%;}
+		.cabecalho .redes_sociais {text-align: center;}
+		#equipe .foto {height: 35%; width: 42%;}
+		#destaques .imoveis .item .detalhe, .result_busca_imovel .imoveis .item .detalhe {padding: 2%;}
+		#menu_2 {background-color: transparent;}
 	}
 
 	@media screen and (width: 667px) {
@@ -101,7 +137,7 @@
 			float: left;
 			margin-right: 2%;
 		}
-		.nav_cel_button {margin-top: 20px;}
+		.nav_cel_button {margin-top: 11px;}
 	}
 
 	@media screen and (width: 736px) {
@@ -109,20 +145,36 @@
 			float: left;
 			margin-right: 2%;
 		}
+		#navbar-collapse { width: 27%; }
+		.logo_2 h1 {margin-top: 0;}
+		.logo_2 h1 img {width: 73%;}
+
 	}
 
 	@media screen and (max-width: 667px){
-		#menu {top: 37px;}
+		#menu {top: 3px;}
 		.nav_cel_button {width: 8%; background-color: white;}
 		.icon-bar {width: 100% !important;}
-		.navbar-default .navbar-collapse, .navbar-default .navbar-form { height: 250px;}
-		.sobre_empresa { margin-top: 7%; }
+		#menu .navbar-default .navbar-collapse, #menu .navbar-default .navbar-form { height: 260px;}
+		.sobre_empresa { margin-top: 0%; }
 		.sobre_empresa h1 {padding-left: 4%;}
 		.sobre_empresa .traco {padding-left: 2%;}
 		.sobre_empresa .valores .divisao {border-right:none;}
 		.noticia_item .item {margin-bottom: 2%;}
 		.separador_footer {display: none;}
 		.title_xs {display: none;}
+		#destaques .imoveis .item .detalhe, .result_busca_imovel .imoveis .item .detalhe{padding: 3%;}
+		#equipe .foto {height: 27%; width: 24%;}
+		.cabecalho .redes_sociais {text-align: center;}
+		.navbar-nav {margin: 5% 1%;}
+		.contato_header {display: none;}
+		#equipe {
+			    background-position: bottom;
+    			padding-bottom: 3%;
+    			background-repeat: repeat-x;
+		}
+		#menu_2 .logo_2 h1 {margin-top: 1%;}
+
 	}
 
 	@media screen and (width: 640px){
@@ -130,23 +182,29 @@
 	}
 
 	@media screen and (width: 568px){
+		.newsletter .simbolo {width: 52px;}
+		.newsletter .simbolo img {width: 71%;}
+		.newsletter .form .input_newsletter {width: 95%; padding-left: 6%; margin-bottom: 3%;}
+		.newsletter .titulo h1 {font-size: 20px;}
+		.navbar-nav {margin: 0;}
+		#equipe .foto img {width: 52%; height: 100%;}
 
 	}
 
 	@media screen and (max-width: 420px){
 		.div_redes a i {font-size: 1.5em;}
 		.logo_h_fixed {display: block;}
-		#menu {top: 31px;}
-		.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		#menu {top: 3px;}
+		#menu .navbar-default .navbar-collapse, #menu .navbar-default .navbar-form {
 			    height: 250px;
 		}
-		.sobre_empresa {padding-top: 20%;}
+		.navbar-nav {margin: 0;}
+		.cabecalho .redes_sociais {text-align: center;}
+		.sobre_empresa { padding-top: 5%;}
 		.sobre_empresa h1 {font-size: 22px;}
 		.sobre_empresa .valores .divisao {border-right:none;}
 		.nav_cel_button {width: 12%; background-color: white;}
 		.icon-bar {width: 100% !important;}
-		.expertises_bg h1 {font-size: 24px;}
-		.expertises_bg h2 {font-size: 15px;}
 		.title_xs {display: none;}
 		.servicos > .nav-tabs > li > a {padding: 10px 10px;}
 		.servicos > .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {padding-bottom: 10px;}
@@ -160,6 +218,30 @@
 		.time h1, #contato h1 {font-size: 26px;}
 		#contato h2 {font-size: 18px;}
 		.separador_footer {display: none;}
+
+		.newsletter .simbolo {width: 52px;}
+		.newsletter .simbolo img {width: 71%;}
+		.newsletter .form .input_newsletter {width: 95%; padding-left: 6%; margin-bottom: 3%;}
+		.newsletter .titulo h1 {font-size: 20px;}
+
+		#equipe .foto {height: 19%; width: 62%;}
+		.espaco_xs {margin-top: 20%;}
+		.result_busca_imovel {margin-top: 87%;}
+		.solicite_consulta { margin-top: 17%;}
+		.solicite_consulta .btn_busca_imovel {background: orange;}
+		.solicite_consulta div button {width: 84.5%;}
+
+		#menu_2 {background-color: transparent; }
+		#menu_2 .navbar-default .navbar-collapse, #menu_2 .navbar-default .navbar-form {height: 207px;}
+	}
+
+	@media screen and (width: 414px) {#menu {top: 3px;}
+		#equipe .foto img {height: 74%;}
+	}
+
+	@media screen and (width: 320px) {
+		.navbar-default .navbar-collapse, .navbar-default .navbar-form {width: 57% !important; }
+		.cabecalho .redes_sociais {top: 61%;}
 	}
 
 }
@@ -171,23 +253,45 @@
 	}
 
 	@media screen and (max-width: 800px) {
-		#slider .carousel-caption {bottom: 19%;}
+		#slider .carousel-caption {bottom: 31%;}
 		.expertises_bg h2 {width: 90%;}
 		#equipe .perfil .foto_time img {height: 500px;}
 		#equipe .perfil {overflow: auto; margin-bottom: 3%;	}
 		#equipe .texto { text-align: left;}
+		.sobre_banner_contato .textos {top: 4%;}
+		.sobre_banner_contato .textos .titulo {font-size: 14px;}
+		.sobre_banner_contato .textos .descricao {font-size: 12px;  margin-top: 7%;}
+		.sobre_banner_contato .textos .botao {font-size: 12px; padding: 2%; width: 72%;}
+		#equipe .foto img {width: 55%; height: 54%;}
+
+		@media screen and (width: 414px) {#equipe .foto img {height: 74%;}	}
+
+
 	}
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 768px) {
+		.solicite_consulta {top: 51%;}
+}
+
+@media only screen and (max-width: 1024px){#equipe  img { height: 100px;width: 100px;}}
+
 @media screen and (width: 1024px) {
+	
+	#menu_2 nav li {padding: 3.5% 1% 0.5% 1%;}
+	.contato_header .tel {font-size: 15px;}
+	.contato_header {padding-top: 5%;}
 	#slider .carousel-caption {
 		bottom: 33%;
 	}
+	#slider .carousel-caption h3 {font-size: 48px;}
+	#menu nav li { padding: 0.5% 1% 1.5% 1%;}
 
-	.solicite_consulta {
-		top: 40%;
+	.solicite_consulta div select {width: 90%; padding-left: 18%;}
+	#destaques .imoveis .item .imagem img, .result_busca_imovel .imoveis .item .imagem img {
+		width: 145px;
+		height: 120px;
 	}
-
 	.noticia_item .data {
 		padding-left: 2%;
 	    padding-top: 3%;
@@ -215,6 +319,12 @@
 	}
 
 	
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+		/* .solicite_consulta {top: 30%;} */
+		/* #equipe .foto_ipad_pro img { height: 7%; } */
+		
 }
 
 @media screen and (width: 1280px) {

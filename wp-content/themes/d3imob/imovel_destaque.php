@@ -41,7 +41,7 @@
 
 		?>
 			<div class="row-fluid">
-					<div class="item col-md-2 col-md-offset-1">
+					<div class="item col-md-2 col-xs-12 col-sm-6 col-md-offset-1">
 						<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
 						<p class="titulo"><?php echo $titulo; ?></p>
 						<p class="valor"><?php echo $valor; ?></p>
@@ -55,7 +55,7 @@
 						</p>
 					</div>
 		<?php	$i++; } else if($i==5){ ?>
-					<div class="item col-md-2">
+					<div class="item col-md-2 col-xs-12 col-sm-6">
 						<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
 						<p class="titulo"><?php echo $titulo?></p>
 						<p class="valor"><?php echo $valor?></p>
@@ -72,7 +72,7 @@
 		<?php
 			$i++; 	} else {
 		?>
-					<div class="item col-md-2">
+					<div class="item col-md-2 col-xs-12 col-sm-6">
 						<p class="imagem"><img src="<?php echo $miniatura['url']; ?>" alt="<?php echo $miniatura['alt']; ?>" /></p>
 						<p class="titulo"><?php echo $titulo?></p>
 						<p class="valor"><?php echo $valor?></p>
